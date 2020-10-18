@@ -1,0 +1,4 @@
+D:\Learning\RemoteEducation\Auth\IdentityServer\Application\bin\Debug\netcoreapp3.1\Domain.dll
+D:\Learning\RemoteEducation\Auth\IdentityServer\Application\obj\Debug\netcoreapp3.1\Application.csprojAssemblyReference.cache
+D:\Learning\RemoteEducation\Auth\IdentityServer\Application\obj\Debug\netcoreapp3.1\Application.AssemblyInfoInputs.cache
+D:\Learning\RemoteEducation\Auth\IdentityServer\Application\obj\Debug\netcoreapp3.1\Application.AssemblyInfo.cs
