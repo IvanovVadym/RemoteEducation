@@ -8,10 +8,10 @@ namespace Application.Schedules.Queries
     public class ScheduleDto : IMapFrom<Schedule>
     {
         public int Id { get; set; }
-        public int TeacherFirstName { get; set; }
-        public int TeacherLastName { get; set; }
-        public int GroupName { get; set; }
-        public int SubjectName { get; set; }
+        public string TeacherFirstName { get; set; }
+        public string TeacherLastName { get; set; }
+        public string GroupName { get; set; }
+        public string SubjectName { get; set; }
         public DateTime DateTime { get; set; }
 
         public void Mapping(Profile profile)

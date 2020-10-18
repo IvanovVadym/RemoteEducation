@@ -5,18 +5,22 @@ using Application.Teachers.Queries;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using RemoteEducation.Models;
 
 namespace RemoteEducation.Controllers
 {
     public class TeacherController: ApiController
     {
         [HttpGet]
+        [Authorize(Policy = Policies.Admin)]
         public async Task<IList<TeacherDto>> GetAll([FromQuery] GetAllTeachersQuery query)
         {
             return await Mediator.Send(query);
         }
 
         [HttpGet("{id}")]
+        [Authorize(Policy = Policies.User)]
         public async Task<IList<TeacherDto>> GetById([FromQuery] GetAllTeachersQuery query)
         {
             return await Mediator.Send(query);
