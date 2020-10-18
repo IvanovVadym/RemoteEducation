@@ -18,7 +18,5 @@ namespace Infrastructure
             services.AddScoped<IApplicationDbContext>(provider => provider.GetService<ApplicationDbContext>());
             return services;
         }
-
-
     }
 }

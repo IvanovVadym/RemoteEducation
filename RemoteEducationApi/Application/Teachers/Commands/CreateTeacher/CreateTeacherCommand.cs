@@ -13,11 +13,11 @@ namespace Application.Teachers.Commands.CreateTeacher
         public string LastName { get; set; }
     }
 
-    public class CreateTodoItemCommandHandler : IRequestHandler<CreateTeacherCommand, int>
+    public class CreateTeacherCommandHandler : IRequestHandler<CreateTeacherCommand, int>
     {
         private readonly IApplicationDbContext _context;
 
-        public CreateTodoItemCommandHandler(IApplicationDbContext context)
+        public CreateTeacherCommandHandler(IApplicationDbContext context)
         {
             _context = context;
         }

@@ -1,10 +1,6 @@
-﻿using Application.Common.Mappings;
-using AutoMapper;
-using Domain.Common;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using AutoMapper;
 using Domain.Entities;
+using RE.Application.Library.Mappings;
 
 namespace Application.Teachers.Queries
 {

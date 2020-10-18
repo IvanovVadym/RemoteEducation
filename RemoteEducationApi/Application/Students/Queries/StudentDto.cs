@@ -1,6 +1,6 @@
-﻿using Application.Common.Mappings;
-using AutoMapper;
+﻿using AutoMapper;
 using Domain.Entities;
+using RE.Application.Library.Mappings;
 
 namespace Application.Students.Queries
 {

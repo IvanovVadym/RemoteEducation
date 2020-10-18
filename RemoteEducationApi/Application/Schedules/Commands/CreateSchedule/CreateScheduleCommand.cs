@@ -1,11 +1,11 @@
-﻿using System;
-using Application.Common.Interfaces;
+﻿using Application.Common.Interfaces;
 using Domain.Common;
+using Domain.Entities;
 using MediatR;
+using RE.Application.Library.Exceptions;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Application.Common.Exceptions;
-using Domain.Entities;
 
 namespace Application.Schedules.Commands.CreateSchedule
 {

@@ -1,20 +1,17 @@
-using System;
-using System.Text;
 using Application;
-using Application.Common.Interfaces;
 using Infrastructure;
-using Infrastructure.Db;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using RE.Application.Library.Interfaces;
 using RemoteEducation.Models;
 using RemoteEducation.Services;
+using System;
+using System.Text;
 
 namespace RemoteEducation
 {
@@ -35,8 +32,6 @@ namespace RemoteEducation
             services.AddSingleton<ICurrentUserService, CurrentUserService>();
             services.AddHttpContextAccessor();
             services.AddControllers();
-
-            var t = Configuration["Jwt: Issuer"];
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>

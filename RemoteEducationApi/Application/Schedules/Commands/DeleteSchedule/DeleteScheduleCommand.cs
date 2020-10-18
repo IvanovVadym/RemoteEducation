@@ -1,12 +1,11 @@
-﻿using Application.Common.Exceptions;
-using Application.Common.Interfaces;
-using Domain.Common;
+﻿using Application.Common.Interfaces;
+using Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Domain.Entities;
+using RE.Application.Library.Exceptions;
 
 namespace Application.Schedules.Commands.DeleteSchedule
 {

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Authorization.Library</id>
+    <version>1.0.0</version>
+    <authors>Vadym Ivanov</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Learning\RemoteEducation\Auth\IdentityServer\RE.Authorization.Library\bin\Debug\netcoreapp3.1\Authorization.Library.dll" target="lib\netcoreapp3.1\Authorization.Library.dll" />
+  </files>
+</package>

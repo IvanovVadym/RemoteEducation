@@ -1,7 +1,7 @@
-﻿using System;
-using Application.Common.Mappings;
-using AutoMapper;
+﻿using AutoMapper;
 using Domain.Entities;
+using RE.Application.Library.Mappings;
+using System;
 
 namespace Application.Schedules.Queries
 {

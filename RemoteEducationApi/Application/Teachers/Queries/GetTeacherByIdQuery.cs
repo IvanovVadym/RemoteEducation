@@ -1,12 +1,10 @@
-﻿using Application.Common.Exceptions;
-using Application.Common.Interfaces;
+﻿using Application.Common.Interfaces;
 using AutoMapper;
-using Domain.Common;
+using Domain.Entities;
 using MediatR;
-using AutoMapper.QueryableExtensions;
+using RE.Application.Library.Exceptions;
 using System.Threading;
 using System.Threading.Tasks;
-using Domain.Entities;
 
 namespace Application.Teachers.Queries
 {

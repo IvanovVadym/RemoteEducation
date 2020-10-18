@@ -1,13 +1,11 @@
-﻿using Application.Common.Exceptions;
-using Application.Common.Interfaces;
+﻿using Application.Common.Interfaces;
 using AutoMapper;
-using Domain.Common;
-using MediatR;
 using AutoMapper.QueryableExtensions;
+using MediatR;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
 
 namespace Application.Teachers.Queries
 {

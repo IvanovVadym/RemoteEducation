@@ -1,8 +1,8 @@
-﻿using Application.Common.Exceptions;
-using Application.Common.Interfaces;
+﻿using Application.Common.Interfaces;
 using AutoMapper;
 using Domain.Entities;
 using MediatR;
+using RE.Application.Library.Exceptions;
 using System.Threading;
 using System.Threading.Tasks;
 

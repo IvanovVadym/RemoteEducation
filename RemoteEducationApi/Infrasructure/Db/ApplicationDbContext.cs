@@ -10,6 +10,7 @@ using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using Domain.Entities;
+using RE.Application.Library.Interfaces;
 
 namespace Infrastructure.Db
 {
@@ -56,7 +57,7 @@ namespace Infrastructure.Db
                 }
             }
 
-            int result = await base.SaveChangesAsync(cancellationToken);
+            var result = await base.SaveChangesAsync(cancellationToken);
 
             return result;
         }

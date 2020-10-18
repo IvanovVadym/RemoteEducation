@@ -1,9 +1,9 @@
-﻿using Application.Common.Exceptions;
-using Application.Common.Interfaces;
+﻿using Application.Common.Interfaces;
 using Domain.Common;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
+using RE.Application.Library.Exceptions;
 
 namespace Application.Groups.Commands.UpdateGroup
 {

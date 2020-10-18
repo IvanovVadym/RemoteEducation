@@ -1,5 +1,5 @@
-﻿using Application.Common.Interfaces;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
+using RE.Application.Library.Interfaces;
 using System.Security.Claims;
 
 namespace RemoteEducation.Services

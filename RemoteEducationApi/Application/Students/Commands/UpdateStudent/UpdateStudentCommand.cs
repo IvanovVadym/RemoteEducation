@@ -1,10 +1,10 @@
-﻿using Application.Common.Exceptions;
-using Application.Common.Interfaces;
+﻿using Application.Common.Interfaces;
 using Domain.Common;
+using Domain.Entities;
 using MediatR;
+using RE.Application.Library.Exceptions;
 using System.Threading;
 using System.Threading.Tasks;
-using Domain.Entities;
 
 namespace Application.Students.Commands.UpdateStudent
 {

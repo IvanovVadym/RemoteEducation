@@ -1,11 +1,11 @@
-﻿using System;
-using Application.Common.Exceptions;
-using Application.Common.Interfaces;
+﻿using Application.Common.Interfaces;
 using Domain.Common;
+using Domain.Entities;
 using MediatR;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
-using Domain.Entities;
+using RE.Application.Library.Exceptions;
 
 namespace Application.Schedules.Commands.UpdateSchedule
 {

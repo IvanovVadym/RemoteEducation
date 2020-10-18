@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using Application.Common.Exceptions;
-using Application.Common.Interfaces;
-using Application.Teachers.Queries;
+﻿using Application.Common.Interfaces;
 using AutoMapper;
 using Domain.Common;
 using MediatR;
+using System.Threading;
+using System.Threading.Tasks;
+using RE.Application.Library.Exceptions;
 
 namespace Application.Groups.Queries
 {
