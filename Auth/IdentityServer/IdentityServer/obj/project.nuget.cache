@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "CpUPJ39z3dOrAiR//1LqTpQkWmpyKSROTgSmUwVjVP3Eyoop6Th4OWBZk4WztavmX0/SyVG3HHVtyj0NkwOZ0Q==",
+  "dgSpecHash": "rEcqkH+KwQ7bJNhOzKTsbJoALfmf8RRZb25p5Gm/arlCxnGGlBwuLMu/6XH+/ffTe0frBBGQZpBvqruV69WyvA==",
   "success": true,
   "projectFilePath": "D:\\Learning\\RemoteEducation\\Auth\\IdentityServer\\IdentityServer\\RE.IdentityServer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vivan3\\.nuget\\packages\\automapper\\10.0.0\\automapper.10.0.0.nupkg.sha512",
     "C:\\Users\\vivan3\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.0.1\\automapper.extensions.microsoft.dependencyinjection.8.0.1.nupkg.sha512",
     "C:\\Users\\vivan3\\.nuget\\packages\\fluentvalidation\\9.2.2\\fluentvalidation.9.2.2.nupkg.sha512",
+    "C:\\Users\\vivan3\\.nuget\\packages\\fluentvalidation.aspnetcore\\9.2.0\\fluentvalidation.aspnetcore.9.2.0.nupkg.sha512",
     "C:\\Users\\vivan3\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\9.2.0\\fluentvalidation.dependencyinjectionextensions.9.2.0.nupkg.sha512",
     "C:\\Users\\vivan3\\.nuget\\packages\\identitymodel\\4.0.0\\identitymodel.4.0.0.nupkg.sha512",
     "C:\\Users\\vivan3\\.nuget\\packages\\identityserver4\\3.0.0\\identityserver4.3.0.0.nupkg.sha512",

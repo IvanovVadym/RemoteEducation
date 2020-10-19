@@ -14,15 +14,18 @@ namespace RE.IdentityServer.Controllers
     public class UserController : ApiController
     {
         [HttpGet]
-        public async Task<IList<UserDto>> GetAll([FromQuery] GetAllUsersQuery query)
+        public async Task<IList<UserDto>> GetAll()
         {
-            return await Mediator.Send(query);
+            return await Mediator.Send(new GetAllUsersQuery());
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<UserDto>> GetById([FromQuery] GetUserByIdQuery query)
+        public async Task<ActionResult<UserDto>> GetById(int id)
         {
-            return await Mediator.Send(query);
+            return await Mediator.Send(new GetUserByIdQuery
+            {
+                Id = id
+            });
         }
 
         [HttpPost]

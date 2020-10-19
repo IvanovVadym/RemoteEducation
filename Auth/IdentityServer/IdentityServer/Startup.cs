@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Application;
 using Authorization.Library.Roles;
+using FluentValidation.AspNetCore;
 using Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -18,6 +19,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using RE.Application.Library.Interfaces;
 using RE.Authorization.Library.Policies;
+using RE.IdentityServer.Filters;
 using RE.IdentityServer.Interfaces;
 using RE.IdentityServer.Services;
 
@@ -41,6 +43,10 @@ namespace IdentityServer
             services.AddScoped<ILoginService, LoginService>();
             services.AddHttpContextAccessor();
             services.AddControllers();
+
+            services.AddControllersWithViews(options =>
+                    options.Filters.Add(new ApiExceptionFilterAttribute()))
+                .AddFluentValidation();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
@@ -81,6 +87,8 @@ namespace IdentityServer
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
