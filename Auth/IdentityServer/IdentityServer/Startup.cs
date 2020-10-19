@@ -18,6 +18,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using RE.Application.Library.Interfaces;
 using RE.Authorization.Library.Policies;
+using RE.IdentityServer.Interfaces;
 using RE.IdentityServer.Services;
 
 namespace IdentityServer
@@ -37,6 +38,7 @@ namespace IdentityServer
             services.AddApplication();
             services.AddInfrastructure(Configuration);
             services.AddSingleton<ICurrentUserService, CurrentUserService>();
+            services.AddScoped<ILoginService, LoginService>();
             services.AddHttpContextAccessor();
             services.AddControllers();
 

@@ -5,9 +5,12 @@ using Application.Subjects.Queries;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Authorization.Library.Roles;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RemoteEducation.Controllers
 {
+    [Authorize(Policy = ReRoles.Manager)]
     public class SubjectController: ApiController
     {
         [HttpGet]

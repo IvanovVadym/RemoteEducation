@@ -13,12 +13,12 @@ namespace Application.Users.Queries
         public int Id { get; set; }
     }
 
-    public class GetUsersQueryHandler : IRequestHandler<GetUserByIdQuery, UserDto>
+    public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, UserDto>
     {
         private readonly IApplicationDbContext _context;
         private readonly IMapper _mapper;
 
-        public GetUsersQueryHandler(IApplicationDbContext context, IMapper mapper)
+        public GetUserByIdQueryHandler(IApplicationDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

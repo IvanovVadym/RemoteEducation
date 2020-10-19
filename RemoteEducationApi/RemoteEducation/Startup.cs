@@ -1,4 +1,5 @@
 using Application;
+using Authorization.Library.Roles;
 using Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -8,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using RE.Application.Library.Interfaces;
-using RemoteEducation.Models;
+using RE.Authorization.Library.Policies;
 using RemoteEducation.Services;
 using System;
 using System.Text;
@@ -53,8 +54,13 @@ namespace RemoteEducation
 
             services.AddAuthorization(config =>
             {
-                config.AddPolicy(Policies.Admin, Policies.AdminPolicy());
-                config.AddPolicy(Policies.User, Policies.UserPolicy());
+                config.AddPolicy(ReRoles.Admin, RePolicies.AdminPolicy());
+                config.AddPolicy(ReRoles.Teacher, RePolicies.TeacherPolicy());
+                config.AddPolicy(ReRoles.Manager, RePolicies.ManagerPolicy());
+                config.AddPolicy(ReRoles.Student, RePolicies.StudentPolicy());
+                // review
+                config.AddPolicy(ReRoles.Admin, RePolicies.ManagerPolicy());
+                config.AddPolicy(ReRoles.Manager, RePolicies.TeacherPolicy());
             });
         }
 
