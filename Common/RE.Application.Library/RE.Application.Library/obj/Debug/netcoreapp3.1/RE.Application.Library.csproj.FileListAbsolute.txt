@@ -1,0 +1,8 @@
+D:\Learning\RemoteEducation\Common\RE.Application.Library\RE.Application.Library\bin\Debug\netcoreapp3.1\RE.Application.Library.deps.json
+D:\Learning\RemoteEducation\Common\RE.Application.Library\RE.Application.Library\bin\Debug\netcoreapp3.1\RE.Application.Library.dll
+D:\Learning\RemoteEducation\Common\RE.Application.Library\RE.Application.Library\bin\Debug\netcoreapp3.1\RE.Application.Library.pdb
+D:\Learning\RemoteEducation\Common\RE.Application.Library\RE.Application.Library\obj\Debug\netcoreapp3.1\RE.Application.Library.AssemblyInfoInputs.cache
+D:\Learning\RemoteEducation\Common\RE.Application.Library\RE.Application.Library\obj\Debug\netcoreapp3.1\RE.Application.Library.AssemblyInfo.cs
+D:\Learning\RemoteEducation\Common\RE.Application.Library\RE.Application.Library\obj\Debug\netcoreapp3.1\RE.Application.Library.csproj.CoreCompileInputs.cache
+D:\Learning\RemoteEducation\Common\RE.Application.Library\RE.Application.Library\obj\Debug\netcoreapp3.1\RE.Application.Library.dll
+D:\Learning\RemoteEducation\Common\RE.Application.Library\RE.Application.Library\obj\Debug\netcoreapp3.1\RE.Application.Library.pdb

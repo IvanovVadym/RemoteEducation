@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>RE.Application.Library</id>
+    <version>1.0.1</version>
+    <authors>Vadym Ivanov</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="AutoMapper" version="10.0.0" exclude="Build,Analyzers" />
+        <dependency id="AutoMapper.Extensions.Microsoft.DependencyInjection" version="8.0.1" exclude="Build,Analyzers" />
+        <dependency id="FluentValidation" version="9.2.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore" version="3.1.9" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Learning\RemoteEducation\Common\RE.Application.Library\RE.Application.Library\bin\Debug\netcoreapp3.1\RE.Application.Library.dll" target="lib\netcoreapp3.1\RE.Application.Library.dll" />
+  </files>
+</package>
