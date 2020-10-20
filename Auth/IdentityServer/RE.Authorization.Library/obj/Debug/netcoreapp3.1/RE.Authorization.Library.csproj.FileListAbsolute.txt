@@ -1,9 +1,0 @@
-D:\Learning\RemoteEducation\Auth\IdentityServer\RE.Authorization.Library\bin\Debug\netcoreapp3.1\RE.Authorization.Library.deps.json
-D:\Learning\RemoteEducation\Auth\IdentityServer\RE.Authorization.Library\bin\Debug\netcoreapp3.1\RE.Authorization.Library.dll
-D:\Learning\RemoteEducation\Auth\IdentityServer\RE.Authorization.Library\bin\Debug\netcoreapp3.1\RE.Authorization.Library.pdb
-D:\Learning\RemoteEducation\Auth\IdentityServer\RE.Authorization.Library\obj\Debug\netcoreapp3.1\RE.Authorization.Library.AssemblyInfoInputs.cache
-D:\Learning\RemoteEducation\Auth\IdentityServer\RE.Authorization.Library\obj\Debug\netcoreapp3.1\RE.Authorization.Library.AssemblyInfo.cs
-D:\Learning\RemoteEducation\Auth\IdentityServer\RE.Authorization.Library\obj\Debug\netcoreapp3.1\RE.Authorization.Library.dll
-D:\Learning\RemoteEducation\Auth\IdentityServer\RE.Authorization.Library\obj\Debug\netcoreapp3.1\RE.Authorization.Library.pdb
-D:\Learning\RemoteEducation\Auth\IdentityServer\RE.Authorization.Library\obj\Debug\netcoreapp3.1\RE.Authorization.Library.csproj.CoreCompileInputs.cache
-D:\Learning\RemoteEducation\Auth\IdentityServer\RE.Authorization.Library\obj\Debug\netcoreapp3.1\RE.Authorization.Library.csprojAssemblyReference.cache
