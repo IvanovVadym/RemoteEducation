@@ -5,7 +5,7 @@
   },
   "projects": {
     "D:\\Learning\\RemoteEducation\\Auth\\IdentityServer\\RE.Authorization.Library\\RE.Authorization.Library.csproj": {
-      "version": "1.0.2",
+      "version": "1.0.3",
       "restore": {
         "projectUniqueName": "D:\\Learning\\RemoteEducation\\Auth\\IdentityServer\\RE.Authorization.Library\\RE.Authorization.Library.csproj",
         "projectName": "RE.Authorization.Library",
@@ -41,6 +41,10 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[3.1.9, )"
+            },
+            "RE.Application.Library": {
+              "target": "Package",
+              "version": "[1.0.1, )"
             }
           },
           "imports": [

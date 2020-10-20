@@ -27,14 +27,14 @@ namespace RemoteEducation.Controllers
         }
 
         [HttpPost]
-        [Authorize(Policy = ReRoles.Manager)]
+        [Authorize(Roles = ReRoles.Manager)]
         public async Task<ActionResult<int>> Create(CreateTeacherCommand command)
         {
             return await Mediator.Send(command);
         }
 
         [HttpPut("{id}")]
-        [Authorize(Policy = ReRoles.Manager)]
+        [Authorize(Roles = ReRoles.Manager)]
         public async Task<ActionResult> Update(int id, UpdateTeacherCommand command)
         {
             if (id != command.Id)
@@ -48,7 +48,7 @@ namespace RemoteEducation.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Policy = ReRoles.Manager)]
+        [Authorize(Roles = ReRoles.Manager)]
         public async Task<ActionResult> Delete(int id)
         {
             await Mediator.Send(new DeleteTeacherCommand { Id = id });

@@ -12,7 +12,8 @@ namespace RE.Authorization.Library.Policies
         }
         public static AuthorizationPolicy TeacherPolicy()
         {
-            return new AuthorizationPolicyBuilder().RequireAuthenticatedUser()
+            return new AuthorizationPolicyBuilder()
+                .RequireAuthenticatedUser()
                 .RequireRole(ReRoles.Teacher).Build();
         }
         public static AuthorizationPolicy ManagerPolicy()

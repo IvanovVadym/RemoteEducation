@@ -9,6 +9,7 @@ namespace Application.Teachers.Commands.CreateTeacher
 {
     public class CreateTeacherCommand : IRequest<int>
     {
+        public int UserId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
     }
@@ -26,6 +27,7 @@ namespace Application.Teachers.Commands.CreateTeacher
         {
             var entity = new Teacher
             {
+                UserId = request.UserId,
                 FirstName = request.FirstName,
                 LastName = request.LastName
             };

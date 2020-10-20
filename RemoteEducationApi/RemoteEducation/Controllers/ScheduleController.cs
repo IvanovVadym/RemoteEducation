@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Authorization.Library.Roles;
 using Microsoft.AspNetCore.Authorization;
 using RE.Authorization.Library.Policies;
+using RemoteEducation.Security;
 
 namespace RemoteEducation.Controllers
 {
@@ -28,15 +29,14 @@ namespace RemoteEducation.Controllers
         }
 
         [HttpPost]
-        [Authorize(Policy = ReRoles.Manager)]
+        [Authorize(Roles = ReRoles.Manager)]
         public async Task<ActionResult<int>> Create(CreateScheduleCommand command)
         {
             return await Mediator.Send(command);
         }
 
         [HttpPut("{id}")]
-        [Authorize(Policy = ReRoles.Teacher)]
-        [Authorize(Policy = ReRoles.Manager)]
+        [Authorize(Roles = Roles.ScheduleEditor)]
         public async Task<ActionResult> Update(int id, UpdateScheduleCommand command)
         {
             if (id != command.Id)
@@ -50,7 +50,7 @@ namespace RemoteEducation.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Policy = ReRoles.Manager)]
+        [Authorize(Roles = ReRoles.Manager)]
         public async Task<ActionResult> Delete(int id)
         {
             await Mediator.Send(new DeleteScheduleCommand { Id = id });
