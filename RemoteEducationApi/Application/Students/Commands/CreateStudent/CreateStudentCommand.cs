@@ -10,6 +10,7 @@ namespace Application.Students.Commands.CreateStudent
 {
     public class CreateStudentCommand : IRequest<int>
     {
+        public int UserId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int GroupId { get; set; }
@@ -37,6 +38,7 @@ namespace Application.Students.Commands.CreateStudent
             {
                 FirstName = request.FirstName,
                 LastName = request.LastName,
+                UserId = request.UserId,
                 GroupId = request.GroupId
             };
 

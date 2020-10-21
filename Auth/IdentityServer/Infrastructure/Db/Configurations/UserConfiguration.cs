@@ -8,14 +8,6 @@ namespace Infrastructure.Db.Configurations
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.Property(t => t.FirstName)
-                .HasMaxLength(20)
-                .IsRequired();
-
-            builder.Property(t => t.LastName)
-                .HasMaxLength(20)
-                .IsRequired();
-
             builder.Property(t => t.Password)
                 .IsRequired();
 

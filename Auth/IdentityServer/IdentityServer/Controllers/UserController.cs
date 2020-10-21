@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace RE.IdentityServer.Controllers
 {
-    [Authorize(Policy = ReRoles.Admin)]
+    [Authorize(Roles = ReRoles.Admin)]
     public class UserController : ApiController
     {
         [HttpGet]

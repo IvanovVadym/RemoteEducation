@@ -5,7 +5,7 @@
   },
   "projects": {
     "D:\\Learning\\RemoteEducation\\Common\\RE.Application.Library\\RE.Application.Library\\RE.Application.Library.csproj": {
-      "version": "1.0.1",
+      "version": "1.0.2",
       "restore": {
         "projectUniqueName": "D:\\Learning\\RemoteEducation\\Common\\RE.Application.Library\\RE.Application.Library\\RE.Application.Library.csproj",
         "projectName": "RE.Application.Library",
@@ -49,6 +49,14 @@
             "FluentValidation": {
               "target": "Package",
               "version": "[9.2.2, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

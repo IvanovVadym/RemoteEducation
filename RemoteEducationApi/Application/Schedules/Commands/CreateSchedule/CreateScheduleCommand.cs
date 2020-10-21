@@ -53,7 +53,8 @@ namespace Application.Schedules.Commands.CreateSchedule
             {
                 SubjectId = request.SubjectId,
                 TeacherId = request.TeacherId,
-                GroupId = request.GroupId
+                GroupId = request.GroupId,
+                DateTime = request.DateTime
             };
 
             await _context.Schedules.AddAsync(entity, cancellationToken);

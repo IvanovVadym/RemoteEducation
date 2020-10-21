@@ -8,8 +8,8 @@ namespace Infrastructure.Db.Configurations
     {
         public void Configure(EntityTypeBuilder<Subject> builder)
         {
-            builder.Property(t => t.Name)
-                .HasMaxLength(5)
+            builder.Property(s => s.Name)
+                .HasMaxLength(30)
                 .IsRequired();
         }
     }

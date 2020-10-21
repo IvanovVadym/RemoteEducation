@@ -6,14 +6,6 @@ namespace Application.Users.Commands.UpdateUser
     {
         public UpdateUserCommandValidator()
         {
-            RuleFor(v => v.FirstName)
-                .NotEmpty().WithMessage("FirstName is required.")
-                .MaximumLength(20).WithMessage("FirstName must not exceed 20 characters.");
-
-            RuleFor(v => v.LastName)
-                .NotEmpty().WithMessage("LastName is required.")
-                .MaximumLength(20).WithMessage("LastName must not exceed 20 characters.");
-
             RuleFor(v => v.Password)
                 .NotEmpty().WithMessage("Password is required.")
                 .MinimumLength(6).WithMessage("Password must not has less then 6 characters.");

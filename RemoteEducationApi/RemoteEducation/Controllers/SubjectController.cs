@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace RemoteEducation.Controllers
 {
-    [Authorize(Policy = ReRoles.Manager)]
+    [Authorize(Roles = ReRoles.Manager)]
     public class SubjectController: ApiController
     {
         [HttpGet]

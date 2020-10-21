@@ -1,8 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using Application;
 using Authorization.Library.Roles;
 using FluentValidation.AspNetCore;
@@ -10,20 +7,19 @@ using Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using RE.Application.Library.Filters;
 using RE.Application.Library.Interfaces;
+using RE.Authorization.Library.DependencyInjection;
 using RE.Authorization.Library.Policies;
-using RE.IdentityServer.Filters;
+//using RE.IdentityServer.Filters;
 using RE.IdentityServer.Interfaces;
 using RE.IdentityServer.Services;
 
-namespace IdentityServer
+namespace RE.IdentityServer
 {
     public class Startup
     {
@@ -48,23 +44,26 @@ namespace IdentityServer
                     options.Filters.Add(new ApiExceptionFilterAttribute()))
                 .AddFluentValidation();
 
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options =>
-                {
-                    options.RequireHttpsMetadata = false;
-                    options.SaveToken = true;
-                    options.TokenValidationParameters = new TokenValidationParameters
-                    {
-                        ValidateIssuer = true,
-                        ValidateAudience = true,
-                        ValidateLifetime = true,
-                        ValidateIssuerSigningKey = true,
-                        ValidIssuer = Configuration["Jwt:Issuer"],
-                        ValidAudience = Configuration["Jwt:Audience"],
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:SecretKey"])),
-                        ClockSkew = TimeSpan.Zero
-                    };
-                });
+            services.AddReAuthentication(Configuration["Jwt:Issuer"], Configuration["Jwt:Audience"],
+                Configuration["Jwt:SecretKey"]);
+
+            //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            //    .AddJwtBearer(options =>
+            //    {
+            //        options.RequireHttpsMetadata = false;
+            //        options.SaveToken = true;
+            //        options.TokenValidationParameters = new TokenValidationParameters
+            //        {
+            //            ValidateIssuer = true,
+            //            ValidateAudience = true,
+            //            ValidateLifetime = true,
+            //            ValidateIssuerSigningKey = true,
+            //            ValidIssuer = Configuration["Jwt:Issuer"],
+            //            ValidAudience = Configuration["Jwt:Audience"],
+            //            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:SecretKey"])),
+            //            ClockSkew = TimeSpan.Zero
+            //        };
+            //    });
 
             services.AddAuthorization(config =>
             {

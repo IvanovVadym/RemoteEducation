@@ -116,7 +116,7 @@ D:\Learning\RemoteEducation\Auth\IdentityServer\IdentityServer\bin\Debug\netcore
 D:\Learning\RemoteEducation\Auth\IdentityServer\IdentityServer\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 D:\Learning\RemoteEducation\Auth\IdentityServer\IdentityServer\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
 D:\Learning\RemoteEducation\Auth\IdentityServer\IdentityServer\bin\Debug\netcoreapp3.1\RE.Authorization.Library.dll
+D:\Learning\RemoteEducation\Auth\IdentityServer\IdentityServer\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
 D:\Learning\RemoteEducation\Auth\IdentityServer\IdentityServer\obj\Debug\netcoreapp3.1\RE.IdentityServer.csproj.CoreCompileInputs.cache
 D:\Learning\RemoteEducation\Auth\IdentityServer\IdentityServer\obj\Debug\netcoreapp3.1\RE.IdentityServer.MvcApplicationPartsAssemblyInfo.cs
 D:\Learning\RemoteEducation\Auth\IdentityServer\IdentityServer\obj\Debug\netcoreapp3.1\RE.IdentityServer.MvcApplicationPartsAssemblyInfo.cache
-D:\Learning\RemoteEducation\Auth\IdentityServer\IdentityServer\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll

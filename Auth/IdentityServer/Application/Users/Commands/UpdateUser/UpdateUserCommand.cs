@@ -14,8 +14,6 @@ namespace Application.Users.Commands.UpdateUser
         public string UserName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
         public string Role { get; set; }
     }
 
@@ -36,8 +34,6 @@ namespace Application.Users.Commands.UpdateUser
                 throw new NotFoundException(nameof(User), request.Id);
             }
 
-            entity.FirstName = request.FirstName;
-            entity.LastName = request.LastName;
             entity.UserName = request.UserName;
             entity.Email = request.Email;
             entity.Password = request.Password;

@@ -205,9 +205,13 @@
               "target": "Package",
               "version": "[3.1.9, )"
             },
-            "RE.Authorization.Library": {
+            "RE.Application.Library": {
               "target": "Package",
               "version": "[1.0.2, )"
+            },
+            "RE.Authorization.Library": {
+              "target": "Package",
+              "version": "[1.0.3, )"
             }
           },
           "imports": [

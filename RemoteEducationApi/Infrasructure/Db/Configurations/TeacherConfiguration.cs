@@ -19,6 +19,9 @@ namespace Infrastructure.Db.Configurations
             builder.Property(t => t.LastName)
                 .HasMaxLength(20)
                 .IsRequired();
+
+            builder.HasIndex(t => t.UserId)
+                .IsUnique();
         }
     }
 }
