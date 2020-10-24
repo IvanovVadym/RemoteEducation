@@ -21,14 +21,17 @@ namespace Application.Schedules.Commands.UpdateSchedule
     public class UpdateScheduleCommandHandler : IRequestHandler<UpdateScheduleCommand>
     {
         private readonly IApplicationDbContext _context;
+        private readonly IReMemoryCache<Schedule> _memoryCache;
 
-        public UpdateScheduleCommandHandler(IApplicationDbContext context)
+        public UpdateScheduleCommandHandler(IApplicationDbContext context, IReMemoryCache<Schedule> memoryCache)
         {
             _context = context;
+            _memoryCache = memoryCache;
         }
         public async Task<Unit> Handle(UpdateScheduleCommand request, CancellationToken cancellationToken)
         {
-            var entity = await _context.Schedules.FindAsync(request.Id);
+            var entity = _memoryCache.GetValue(request.Id) 
+                         ?? await _context.Schedules.FindAsync(request.Id);
 
             if (entity == null)
             {

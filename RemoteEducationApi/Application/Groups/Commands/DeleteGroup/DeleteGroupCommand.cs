@@ -1,11 +1,11 @@
 ﻿using Application.Common.Interfaces;
-using Domain.Common;
+using Domain.Entities;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using RE.Application.Library.Exceptions;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using RE.Application.Library.Exceptions;
 
 namespace Application.Groups.Commands.DeleteGroup
 {

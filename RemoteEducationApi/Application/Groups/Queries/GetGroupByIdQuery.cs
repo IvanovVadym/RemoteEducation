@@ -1,10 +1,10 @@
 ﻿using Application.Common.Interfaces;
 using AutoMapper;
-using Domain.Common;
+using Domain.Entities;
 using MediatR;
+using RE.Application.Library.Exceptions;
 using System.Threading;
 using System.Threading.Tasks;
-using RE.Application.Library.Exceptions;
 
 namespace Application.Groups.Queries
 {

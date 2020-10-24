@@ -1,8 +1,8 @@
 ﻿using Application.Common.Interfaces;
+using Domain.Entities;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
-using Domain.Common;
 
 namespace Application.Groups.Commands.CreateGroup
 {

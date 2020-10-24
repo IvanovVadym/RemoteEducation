@@ -20,10 +20,12 @@ namespace Application.Schedules.Commands.CreateSchedule
     public class CreateTodoItemCommandHandler : IRequestHandler<CreateScheduleCommand, int>
     {
         private readonly IApplicationDbContext _context;
+        private readonly IReMemoryCache<Schedule> _memoryCache;
 
-        public CreateTodoItemCommandHandler(IApplicationDbContext context)
+        public CreateTodoItemCommandHandler(IApplicationDbContext context, IReMemoryCache<Schedule> memoryCache)
         {
             _context = context;
+            _memoryCache = memoryCache;
         }
 
         public async Task<int> Handle(CreateScheduleCommand request, CancellationToken cancellationToken)
@@ -60,6 +62,8 @@ namespace Application.Schedules.Commands.CreateSchedule
             await _context.Schedules.AddAsync(entity, cancellationToken);
 
             await _context.SaveChangesAsync(cancellationToken);
+
+            _memoryCache.SetValue(entity.Id, entity);
 
             return entity.Id;
         }

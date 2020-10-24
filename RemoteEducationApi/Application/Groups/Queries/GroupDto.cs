@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Domain.Common;
+using Domain.Entities;
 using RE.Application.Library.Mappings;
 
 namespace Application.Groups.Queries

@@ -17,10 +17,12 @@ namespace Application.Schedules.Commands.DeleteSchedule
     public class DeleteTodoListCommandHandler : IRequestHandler<DeleteScheduleCommand>
     {
         private readonly IApplicationDbContext _context;
+        private readonly IReMemoryCache<Schedule> _memoryCache;
 
-        public DeleteTodoListCommandHandler(IApplicationDbContext context)
+        public DeleteTodoListCommandHandler(IApplicationDbContext context, IReMemoryCache<Schedule> memoryCache)
         {
             _context = context;
+            _memoryCache = memoryCache;
         }
 
         public async Task<Unit> Handle(DeleteScheduleCommand request, CancellationToken cancellationToken)
@@ -37,6 +39,8 @@ namespace Application.Schedules.Commands.DeleteSchedule
             _context.Schedules.Remove(entity);
 
             await _context.SaveChangesAsync(cancellationToken);
+
+            _memoryCache.RemoveValue(entity.Id);
 
             return Unit.Value;
         }

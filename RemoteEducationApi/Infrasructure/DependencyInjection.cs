@@ -1,4 +1,5 @@
 ﻿using Application.Common.Interfaces;
+using Infrastructure.Cache;
 using Infrastructure.Db;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -16,6 +17,8 @@ namespace Infrastructure
                     b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
 
             services.AddScoped<IApplicationDbContext>(provider => provider.GetService<ApplicationDbContext>());
+            services.AddMemoryCache();
+            services.AddSingleton(typeof(IReMemoryCache<>), typeof(ReMemoryCache<>));
             return services;
         }
     }

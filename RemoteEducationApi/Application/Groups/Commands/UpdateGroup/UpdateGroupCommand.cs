@@ -3,6 +3,7 @@ using Domain.Common;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
+using Domain.Entities;
 using RE.Application.Library.Exceptions;
 
 namespace Application.Groups.Commands.UpdateGroup

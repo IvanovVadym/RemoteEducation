@@ -3,9 +3,8 @@ using Domain.Common;
 
 namespace Domain.Entities
 {
-    public class Schedule : AuditableEntity
+    public class Schedule : BaseEntity
     {
-        public int Id { get; set; }
         public Group Group { get; set; }
         public int GroupId { get; set; }
         public Teacher Teacher { get; set; }

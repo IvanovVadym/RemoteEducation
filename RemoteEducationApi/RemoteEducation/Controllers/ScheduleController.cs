@@ -14,16 +14,9 @@ namespace RemoteEducation.Controllers
 {
     public class ScheduleController: ApiController
     {
-        [HttpGet]
-        [Authorize]
-        public async Task<IList<ScheduleDto>> GetAll([FromQuery] GetAllSchedulesQuery query)
-        {
-            return await Mediator.Send(query);
-        }
-
         [HttpGet("{id}")]
         [Authorize]
-        public async Task<IList<ScheduleDto>> GetById([FromQuery] GetAllSchedulesQuery query)
+        public async Task<ActionResult<ScheduleDto>> GetById([FromQuery] GetScheduleByIdQuery query)
         {
             return await Mediator.Send(query);
         }
