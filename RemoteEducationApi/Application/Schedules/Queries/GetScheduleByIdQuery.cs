@@ -4,6 +4,8 @@ using Domain.Entities;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
+using Application.Common;
+using Application.Groups.Queries;
 using Microsoft.EntityFrameworkCore;
 using RE.Application.Library.Exceptions;
 
@@ -38,8 +40,6 @@ namespace Application.Schedules.Queries
                 throw new NotFoundException(nameof(Schedule), request.Id);
             }
 
-            var t = _mapper.Map<ScheduleDto>(entity);
-            
             return _mapper.Map<ScheduleDto>(entity);
         }
     }
