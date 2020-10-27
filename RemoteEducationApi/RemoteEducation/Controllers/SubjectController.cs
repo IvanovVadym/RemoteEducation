@@ -14,15 +14,18 @@ namespace RemoteEducation.Controllers
     public class SubjectController: ApiController
     {
         [HttpGet]
-        public async Task<IList<SubjectDto>> GetAll([FromQuery] GetAllSubjectsQuery query)
+        public async Task<IList<SubjectDto>> GetAll()
         {
-            return await Mediator.Send(query);
+            return await Mediator.Send(new GetAllSubjectsQuery());
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<SubjectDto>> GetById([FromQuery] GetSubjectByIdQuery query)
+        public async Task<ActionResult<SubjectDto>> GetById(int id)
         {
-            return await Mediator.Send(query);
+            return await Mediator.Send(new GetSubjectByIdQuery
+            {
+                Id = id
+            });
         }
 
         [HttpPost]

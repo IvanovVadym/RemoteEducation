@@ -14,16 +14,19 @@ namespace RemoteEducation.Controllers
     {
         [HttpGet]
         [Authorize]
-        public async Task<IList<GroupDto>> GetAll([FromQuery] GetAllGroupsQuery query)
+        public async Task<IList<GroupDto>> GetAll()
         {
-            return await Mediator.Send(query);
+            return await Mediator.Send(new GetAllGroupsQuery());
         }
 
         [HttpGet("{id}")]
         [Authorize]
-        public async Task<ActionResult<GroupDto>> GetById([FromQuery] GetGroupByIdQuery query)
+        public async Task<ActionResult<GroupDto>> GetById(int id)
         {
-            return await Mediator.Send(query);
+            return await Mediator.Send(new GetGroupByIdQuery
+            {
+                Id = id
+            });
         }
 
         [HttpPost]
