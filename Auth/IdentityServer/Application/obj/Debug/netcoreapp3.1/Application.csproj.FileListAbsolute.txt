@@ -1,0 +1,12 @@
+D:\Learning\RemoteEducation\Auth\IdentityServer\Application\bin\Debug\netcoreapp3.1\Domain.dll
+D:\Learning\RemoteEducation\Auth\IdentityServer\Application\obj\Debug\netcoreapp3.1\Application.csprojAssemblyReference.cache
+D:\Learning\RemoteEducation\Auth\IdentityServer\Application\obj\Debug\netcoreapp3.1\Application.AssemblyInfoInputs.cache
+D:\Learning\RemoteEducation\Auth\IdentityServer\Application\obj\Debug\netcoreapp3.1\Application.AssemblyInfo.cs
+D:\Learning\RemoteEducation\Auth\IdentityServer\Application\bin\Debug\netcoreapp3.1\Application.deps.json
+D:\Learning\RemoteEducation\Auth\IdentityServer\Application\bin\Debug\netcoreapp3.1\Application.dll
+D:\Learning\RemoteEducation\Auth\IdentityServer\Application\bin\Debug\netcoreapp3.1\Application.pdb
+D:\Learning\RemoteEducation\Auth\IdentityServer\Application\bin\Debug\netcoreapp3.1\Domain.pdb
+D:\Learning\RemoteEducation\Auth\IdentityServer\Application\obj\Debug\netcoreapp3.1\Application.csproj.CoreCompileInputs.cache
+D:\Learning\RemoteEducation\Auth\IdentityServer\Application\obj\Debug\netcoreapp3.1\Application.csproj.CopyComplete
+D:\Learning\RemoteEducation\Auth\IdentityServer\Application\obj\Debug\netcoreapp3.1\Application.dll
+D:\Learning\RemoteEducation\Auth\IdentityServer\Application\obj\Debug\netcoreapp3.1\Application.pdb

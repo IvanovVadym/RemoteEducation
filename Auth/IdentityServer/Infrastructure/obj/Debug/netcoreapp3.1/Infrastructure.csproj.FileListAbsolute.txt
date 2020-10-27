@@ -1,0 +1,17 @@
+D:\Learning\RemoteEducation\Auth\IdentityServer\Infrastructure\bin\Debug\netcoreapp3.1\Application.dll
+D:\Learning\RemoteEducation\Auth\IdentityServer\Infrastructure\bin\Debug\netcoreapp3.1\Domain.dll
+D:\Learning\RemoteEducation\Auth\IdentityServer\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csprojAssemblyReference.cache
+D:\Learning\RemoteEducation\Auth\IdentityServer\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfoInputs.cache
+D:\Learning\RemoteEducation\Auth\IdentityServer\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfo.cs
+D:\Learning\RemoteEducation\Auth\IdentityServer\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.deps.json
+D:\Learning\RemoteEducation\Auth\IdentityServer\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.runtimeconfig.json
+D:\Learning\RemoteEducation\Auth\IdentityServer\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.runtimeconfig.dev.json
+D:\Learning\RemoteEducation\Auth\IdentityServer\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.dll
+D:\Learning\RemoteEducation\Auth\IdentityServer\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.pdb
+D:\Learning\RemoteEducation\Auth\IdentityServer\Infrastructure\bin\Debug\netcoreapp3.1\Application.pdb
+D:\Learning\RemoteEducation\Auth\IdentityServer\Infrastructure\bin\Debug\netcoreapp3.1\Domain.pdb
+D:\Learning\RemoteEducation\Auth\IdentityServer\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CoreCompileInputs.cache
+D:\Learning\RemoteEducation\Auth\IdentityServer\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CopyComplete
+D:\Learning\RemoteEducation\Auth\IdentityServer\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.dll
+D:\Learning\RemoteEducation\Auth\IdentityServer\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.pdb
+D:\Learning\RemoteEducation\Auth\IdentityServer\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.genruntimeconfig.cache
