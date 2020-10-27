@@ -6,6 +6,8 @@ using RE.Application.Library.Exceptions;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Application.Schedules.Queries;
+using Microsoft.EntityFrameworkCore;
 
 namespace Application.Schedules.Commands.CreateSchedule
 {
@@ -20,10 +22,12 @@ namespace Application.Schedules.Commands.CreateSchedule
     public class CreateTodoItemCommandHandler : IRequestHandler<CreateScheduleCommand, int>
     {
         private readonly IApplicationDbContext _context;
+        private readonly IApplicationCache<Schedule> _applicationCache;
 
-        public CreateTodoItemCommandHandler(IApplicationDbContext context)
+        public CreateTodoItemCommandHandler(IApplicationDbContext context, IApplicationCache<Schedule> applicationCache)
         {
             _context = context;
+            _applicationCache = applicationCache;
         }
 
         public async Task<int> Handle(CreateScheduleCommand request, CancellationToken cancellationToken)
@@ -56,12 +60,25 @@ namespace Application.Schedules.Commands.CreateSchedule
                 GroupId = request.GroupId,
                 DateTime = request.DateTime
             };
-
+            
             await _context.Schedules.AddAsync(entity, cancellationToken);
 
             await _context.SaveChangesAsync(cancellationToken);
 
+            CacheEntity(entity, cancellationToken);
+
             return entity.Id;
+        }
+
+        private async void CacheEntity(Schedule entity, CancellationToken cancellationToken)
+        {
+           var entityWithChildren =  await _context.Schedules
+                .Include(s => s.Teacher)
+                .Include(s => s.Group)
+                .Include(s => s.Subject)
+                .FirstOrDefaultAsync(s => s.Id == entity.Id, cancellationToken: cancellationToken);
+
+           _applicationCache.Set(entityWithChildren.Id, entityWithChildren);
         }
     }
 }

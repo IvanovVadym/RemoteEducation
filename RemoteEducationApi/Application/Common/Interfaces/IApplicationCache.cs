@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Application.Common.Interfaces
+﻿namespace Application.Common.Interfaces
 {
-    interface IApplicationCache
+    public interface IApplicationCache<T>
     {
+        T Get(int key);
+        void Set(int key, T value);
+        void Remove(int key);
     }
 }

@@ -5,6 +5,7 @@ using MediatR;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using RE.Application.Library.Exceptions;
 
 namespace Application.Schedules.Commands.UpdateSchedule
@@ -21,10 +22,12 @@ namespace Application.Schedules.Commands.UpdateSchedule
     public class UpdateScheduleCommandHandler : IRequestHandler<UpdateScheduleCommand>
     {
         private readonly IApplicationDbContext _context;
+        private readonly IApplicationCache<Schedule> _applicationCache;
 
-        public UpdateScheduleCommandHandler(IApplicationDbContext context)
+        public UpdateScheduleCommandHandler(IApplicationDbContext context, IApplicationCache<Schedule> applicationCache)
         {
             _context = context;
+            _applicationCache = applicationCache;
         }
         public async Task<Unit> Handle(UpdateScheduleCommand request, CancellationToken cancellationToken)
         {
@@ -61,7 +64,13 @@ namespace Application.Schedules.Commands.UpdateSchedule
             entity.GroupId = request.GroupId;
             entity.DateTime = request.DateTime;
 
+            entity.Subject = subject;
+            entity.Teacher = teacher;
+            entity.Group = group;
+
             await _context.SaveChangesAsync(cancellationToken);
+
+            _applicationCache.Set(entity.Id, entity);
 
             return Unit.Value;
         }
