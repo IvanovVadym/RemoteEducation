@@ -1,9 +1,8 @@
 ﻿using Application.Users.Queries;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using System.Threading.Tasks;
 using RE.IdentityServer.Interfaces;
+using System.Threading.Tasks;
 
 namespace RE.IdentityServer.Controllers
 {

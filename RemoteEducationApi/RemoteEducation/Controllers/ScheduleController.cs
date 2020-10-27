@@ -16,16 +16,19 @@ namespace RemoteEducation.Controllers
     {
         [HttpGet]
         [Authorize]
-        public async Task<IList<ScheduleDto>> GetAll([FromQuery] GetAllSchedulesQuery query)
+        public async Task<IList<ScheduleDto>> GetAll()
         {
-            return await Mediator.Send(query);
+            return await Mediator.Send(new GetAllSchedulesQuery());
         }
 
         [HttpGet("{id}")]
         [Authorize]
-        public async Task<IList<ScheduleDto>> GetById([FromQuery] GetAllSchedulesQuery query)
+        public async Task<ActionResult<ScheduleDto>> GetById(int id)
         {
-            return await Mediator.Send(query);
+            return await Mediator.Send(new GetScheduleByIdQuery()
+            {
+                Id = id
+            });
         }
 
         [HttpPost]

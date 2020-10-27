@@ -4,6 +4,9 @@ using Domain.Entities;
 using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
+using Application.Common;
+using Application.Groups.Queries;
+using Microsoft.EntityFrameworkCore;
 using RE.Application.Library.Exceptions;
 
 namespace Application.Schedules.Queries
@@ -26,7 +29,11 @@ namespace Application.Schedules.Queries
 
         public async Task<ScheduleDto> Handle(GetScheduleByIdQuery request, CancellationToken cancellationToken)
         {
-            var entity = await _context.Schedules.FindAsync(request.Id);
+            var entity = await _context.Schedules
+                .Include(s => s.Teacher)
+                .Include(s => s.Group)
+                .Include(s => s.Subject)
+                .FirstOrDefaultAsync(s => s.Id == request.Id, cancellationToken: cancellationToken);
 
             if (entity == null)
             {

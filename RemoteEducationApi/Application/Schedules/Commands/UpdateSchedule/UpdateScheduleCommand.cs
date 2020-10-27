@@ -56,7 +56,6 @@ namespace Application.Schedules.Commands.UpdateSchedule
                 throw new NotFoundException(nameof(Subject), request.SubjectId);
             }
 
-
             entity.SubjectId = request.SubjectId;
             entity.TeacherId = request.TeacherId;
             entity.GroupId = request.GroupId;

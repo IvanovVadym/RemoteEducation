@@ -12,7 +12,7 @@ namespace Application.Schedules.Commands.CreateSchedule
             RuleFor(v => v.DateTime)
                 .NotEmpty().WithMessage("DateTime is required.")
                 .Must(dateTime => dateTime > DateTime.Now)
-                .WithMessage("DateTime greater then current time");
+                .WithMessage("DateTime should be greater then current time");
         }
     }
 }
